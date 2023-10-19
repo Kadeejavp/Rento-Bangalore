@@ -587,7 +587,7 @@ h6 {
     padding-top: 5px;
     top: 28vh;
     height: 21vh;
-    width: 63vw;
+    width: 61vw;
   }
 
   .client-box button {
@@ -596,12 +596,21 @@ h6 {
   }
 
   .client-box{
-    width: 70vw;
+    width: 68vw;
     height: 21vh;
     top: 10vh;
   }
 }
 
+@media(max-width: 365px){
+ .client-box{
+   width: 70vw;
+ }
+
+ .owner-box{
+   width: 63vw;
+ }
+   
 @media(max-width: 335px){
   #hero img {
     width: 140px;
