@@ -624,7 +624,13 @@ h6 {
   }
 }
 
-@media(max-width: 420px){
+@media(max-width: 430px){
+  .client-box{
+    width: 61vw;
+  }
+}
+
+@media(max-width: 424px){
   .client-box{
     width: 63vw;
     height: 19vh;
