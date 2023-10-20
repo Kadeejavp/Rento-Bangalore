@@ -5,6 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
   <title>Rento Bangalore</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -72,14 +74,14 @@
               <input type="text" name="Name" class="form-control" id="name" placeholder="Your Name" required>
             </div>
             <div class="form-group col-md-4 col-sm-6">
-              <input type="text" class="form-control" name="Contact-Number" id="number" placeholder="Contact Number"
+              <input type="text" class="form-control" name="Contact Number" id="number" placeholder="Contact Number"
                 required>
             </div>
 
 
 
             <div class="form-group col-md-4 col-sm-6">
-              <select class="form-control" name="Looking-for" id="Purpose" required>
+              <select class="form-control" name="Looking for" id="Purpose" required>
                 <optgroup>
                   <option value="" disabled selected hidden>Looking For</option>
                   <option value="Rent">Rent</option>
@@ -114,7 +116,7 @@
 
 
             <div class="form-group col-md-4 col-sm-6">
-              <select class="form-control" name="Cient-Type" id="clienttype" required>
+              <select class="form-control" name="Cient Type" id="clienttype" required>
                 <optgroup>
                   <option value="" disabled selected hidden>For</option>
                   <option value="Family">Family</option>
@@ -124,7 +126,7 @@
             </div>
 
             <div class="form-group col-md-4 col-sm-6">
-              <select class="form-control" name="No-of-Persons" id="No-of-Persons" required>
+              <select class="form-control" name="No of Persons" id="No-of-Persons" required>
                 <optgroup>
                   <option value="" disabled selected hidden>No of Persons</option>
                   <option value="1">1</option>
@@ -141,7 +143,7 @@
 
 
             <div class="form-group col-md-4 col-sm-6">
-              <select class="form-control" name="Preffered Property" id="type" required>
+              <select class="form-control" name="Property Type" id="type" required>
                 <optgroup>
                   <option value="" disabled selected hidden>Preffered Property</option>
                   <option value="1RK">1RK</option>
@@ -157,7 +159,7 @@
             </div>
 
             <div class="form-group col-md-4 col-sm-6">
-              <select class="form-control" name="Furniture-Type" id="Type" required>
+              <select class="form-control" name="Furniture Type" id="Type" required>
                 <optgroup>
                   <option value="" disabled selected hidden>Furniture Type</option>
                   <option value="Fully">Fully</option>
@@ -170,7 +172,7 @@
 
 
             <div class="form-group col-md-4 col-sm-6">
-              <select class="form-control" name="Budget-Range" id="Budget" required>
+              <select class="form-control" name="Budget Range" id="Budget" required>
                 <optgroup>
                   <option value="" disabled selected hidden>Budget Range</option>
                   <option value="10K-15K">10K-15K</option>
@@ -185,7 +187,7 @@
             </div>
 
             <div class="form-group col-md-6 col-sm-6">
-              <select class="form-control" name="Veg-or-Non-veg" id="Veg-or-Non-veg" required>
+              <select class="form-control" name="Food Type" id="Veg-or-Non-veg" required>
                 <optgroup>
                   <option value="" disabled selected hidden>Veg or Non-veg</option>
                   <option value="Veg">Veg</option>
@@ -196,7 +198,7 @@
 
 
             <div class="form-group col-md-6">
-              <select class="form-control" name="Date-of-Shifting" id="Date-of-Shifting" required>
+              <select class="form-control" name="Date of Shifting" id="Date-of-Shifting" required>
                 <optgroup>
                   <option value="" disabled selected hidden>Date of Shifting</option>
                   <option value="1-5-Days">1-5 Days</option>
@@ -209,7 +211,7 @@
             </div>
 
             <div class="form-group">
-              <textarea class="form-control" name="Other-Preferences" rows="5" id="Otherpreferences"
+              <textarea class="form-control" name="Other Preferences" rows="5" id="Otherpreferences"
                 placeholder="Other Preferences"></textarea>
             </div>
           </div>
@@ -221,6 +223,9 @@
               style="width: 100px;background-color: #9c8464;color: white;padding: 5px;font-family: monospace;border-radius: 3px;border: none;">
           </div>
         </form>
+
+        <div class="text-center" style="margin-top: 2em;"><span id="msg"></span></div>
+
       </div>
 
     </div>
@@ -252,6 +257,24 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbxdxVQGcnKwNlKs2XZZ0M1_sqDKiGxk8FJD9r7FMX56Mwn7ou4hGoWVEejxBe3oFcle/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+          msg.innerHTML = "Thank you!!We will get back to you soon"
+          setTimeout(function(){
+            msg.innerHTML = ""
+          },5000)
+          form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
 
 </body>
 

@@ -1294,8 +1294,18 @@ optgroup{
   border-color: #9c8464;
 }
 
+#contact span{
+  font-family: monospace;
+  font-size: 22px;
+}
+
 .form-group{
   margin-bottom: 2vh;
+}
+
+#contact textarea{
+  font-family: monospace;
+  color: rgb(110, 107, 107);
 }
 
 
