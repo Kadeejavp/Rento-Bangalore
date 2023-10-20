@@ -523,6 +523,51 @@ h6 {
   }
 }
 
+@media(min-width: 600px) and (min-height: 1000px){
+  .client-box{
+    width: 40vw;
+    top: 9vh;
+    height: 18vh;
+  }
+
+  .owner-box{
+    left: 34vw;
+    width: 41vw;
+    height: 19vh;
+  }
+
+  .box p{
+    margin-left: 8vw;
+  }
+
+  .owner-box button{
+    margin-left: 9vw;
+  }
+
+  .client-box button{
+    margin-left: 7vw;
+  }
+}
+
+@media(min-width: 900px) and (min-height: 1300px){
+  .owner-box{
+    top: 19vh;
+  }
+}
+
+@media(min-width: 500px) and (min-height: 700px){
+  .owner-box{
+    top: 23vh !important;
+  }
+}
+
+@media(min-width: 1000px) and (min-height: 600px){
+  .owner-box{
+    top: 22vh;
+    height: 29vh;
+  }
+}
+
 @media(max-width: 576px){
   #hero img {
     width: 160px;
@@ -540,7 +585,7 @@ h6 {
   }
 
   .owner-box{
-    top: 24vh;
+    top: 21vh;
     height: 25vh;
     left: 44vw;
     width: 45vw;
@@ -566,11 +611,11 @@ h6 {
 
 @media(max-width: 440px){
   .client-box{
-    width: 54vw;
+    width: 58vw;
   }
 
   .owner-box{
-    width: 49vw;
+    width: 53vw;
     left: 39vw;
   }
 
@@ -581,21 +626,26 @@ h6 {
 
 @media(max-width: 420px){
   .client-box{
-    width: 59vw;
+    width: 63vw;
+    height: 19vh;
+    top: 10vh;
   }
 
   .owner-box{
     left: 33vw;
     width: 58vw;
+    top: 52vw;
+    height: 20vh;
   }
 }
 
 @media(max-width: 390px){
   .owner-box{
     padding-top: 5px;
-    top: 28vh;
-    height: 21vh;
-    width: 55vw;
+    top: 25vh;
+    height: 19vh;
+    width: 62vw;
+    left: 31vw;
   }
 
   .client-box button {
@@ -604,9 +654,10 @@ h6 {
   }
 
   .client-box{
-    width: 62vw;
-    height: 21vh;
+    width: 66vw;
+    height: 19vh;
     top: 10vh;
+    left: 18vw;
   }
 }
 
@@ -650,6 +701,12 @@ h6 {
 @media(max-width: 295px){
   .client-box{
     width: 80vw;
+    left: 13vw;
+  }
+
+  .owner-box{
+    left: 23vw;
+    top: 23vh;
   }
 }
 /*--------------------------------------------------------------
