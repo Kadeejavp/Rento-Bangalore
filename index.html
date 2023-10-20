@@ -32,6 +32,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" data-aos="fade-in">
 
+
     <div class="vl"></div>
     <div class="vl" style="left: 9%;"></div>
 
@@ -45,11 +46,11 @@
     <div class="container box">
       <div class="client-box" data-aos="fade-left">
         <p>If you need a property</p>
-        <button>share your requirements</button>
+        <a href="#contact"><button>share your requirements</button></a>
       </div>
       <div class="owner-box" data-aos="fade-right">
         <p>If you own a property</p>
-        <button>share your details</button>
+        <a href="#owner-contact"><button>share your details</button></a>
       </div>
     </div>
 
@@ -123,8 +124,18 @@
             </div>
 
             <div class="form-group col-md-4 col-sm-6">
-              <input type="text" name="No-of-Persons" class="form-control" id="Noofpersons" placeholder="No of Persons"
-                required>
+              <select class="form-control" name="No-of-Persons" id="No-of-Persons" required>
+                <optgroup>
+                  <option value="" disabled selected hidden>No of Persons</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="More-than-5">More than 5</option>
+                  <option value="More-than-10">More than 10</option>
+                </optgroup>
+              </select>
             </div>
 
 
@@ -219,7 +230,9 @@
 
   <section id="owner-contact">
     <div class="container">
-      <a href="#contact">hello</a>
+      <div class="section-title">
+        <h2>For Owners</h2>
+      </div>
     </div>
   </section>
 
