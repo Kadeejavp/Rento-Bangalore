@@ -172,7 +172,7 @@ h6 {
   border-bottom: 2px solid #9c8464;
   padding-top: 20px;
   border-radius: 5px;
-  width: 30%;
+  width: 40%;
   left: 45vw;
   top: 100px;
   height: 35vh;
@@ -238,7 +238,7 @@ h6 {
 
   .owner-box{
     left: 40vw;
-    width: 29vw;
+    width: 39vw;
   }
 }
 
@@ -254,7 +254,7 @@ h6 {
 
 @media (max-width:900px){
   .owner-box{
-    width: 33vw;
+    width: 46vw;
   }
 }
 
@@ -284,7 +284,7 @@ h6 {
 
 @media (max-width: 830px){
   .client-box{
-    width:55vh;
+    width:46vh;
     height: 25vh;
     left: 17vw;
   }
@@ -292,7 +292,7 @@ h6 {
   .owner-box{
     top: 20vh;
     height: 29vh;
-    left: 52vw;
+    left: 32vw;
   }
 }
 
@@ -339,7 +339,7 @@ h6 {
 
   .client-box{
     left: 12vw;
-    width: 45vw;
+    width: 58vw;
   }
 
   .owner-box{
@@ -418,14 +418,14 @@ h6 {
   .owner-box{
     top: 21vh;
     height: 25vh;
-    left: 44vw;
-    width: 47vw;
+    left: 32vw;
+    width: 59vw;
   }
 }
 
 @media(max-width: 540px){
   .client-box{
-    width: 50vw;
+    width: 60vw;
   }
 }
 
@@ -554,7 +554,7 @@ h6 {
 
   .owner-box{
     left: 23vw;
-    top: 23vh;
+    top: 26vh;
   }
 
   .box p{
