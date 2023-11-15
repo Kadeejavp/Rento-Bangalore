@@ -1,0 +1,299 @@
+body {
+  font-family: monospace;
+}
+
+:root{
+  --color-secondary: #161718;
+}
+
+.section-title-1 {
+  padding-top: 40px;
+  font-family: monospace;
+  color: white;
+  letter-spacing: 4px;
+  float: left;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.vl{
+  margin-top: 200px;
+  height: 60px;
+  border-left: 2px solid white;
+  position: absolute;
+  left: 50%;
+}
+
+.hl{
+  padding-top: 60px;
+  border-bottom: 2px solid white;
+  opacity: 1;
+  z-index: 2;
+  width: 20%;
+  margin-left: 33%;
+}
+
+.section-title-2 {
+  font-family: monospace;
+  color: white;
+  letter-spacing: 4px;
+  padding-bottom: 40px;
+  float: left;
+  padding-left: 5px;
+}
+
+#contact {
+  background: black;
+}
+
+#contact select {
+  -webkit-appearance: menulist;
+  appearance: menulist;
+  font-family: monospace;
+  background-color: var(--color-secondary);
+  color: white;
+  border: none;
+}
+
+.serial-no {
+  margin-top: 112px;
+  font-family: monospace;
+  padding-bottom: 30px;
+  color: white;
+  margin-left: 5px;
+}
+
+.logo{
+  padding-top: 50px;
+
+}
+
+#contact img{
+  width: 226px;
+  height: 118px;
+}
+
+.label {
+  text-decoration: underline;
+  font-weight: 900;
+  padding-top: 3vh;
+  font-size: 17px;
+}
+
+.my-form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: white ;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--color-secondary);
+  background-clip: padding-box;
+  border: black;
+  border-radius: var(--bs-border-radius);
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+::placeholder {
+  color: white;
+}
+
+optgroup {
+  font-family: monospace;
+}
+
+#contact ::placeholder {
+  font-family: monospace;
+}
+
+#contact input {
+  font-family: monospace;
+}
+
+#contact input:focus {
+  outline-style: none;
+  box-shadow: none;
+  border: 2px solid;
+  border-color: white;
+}
+
+#contact select:focus {
+  outline-style: none;
+  box-shadow: none;
+  border: 2px solid;
+  border-color: white;
+}
+
+#contact textarea:focus {
+  outline-style: none;
+  box-shadow: none;
+  border: 2px solid;
+  border-color: white;
+}
+
+#contact span {
+  font-family: monospace;
+  font-size: 22px;
+}
+
+.form-group {
+  margin-bottom: 3vh;
+}
+
+#contact textarea {
+  font-family: monospace;
+  color: white;
+  background-color: var(--color-secondary);
+  border: none;
+}
+
+label {
+  font-family: monospace;
+  margin-bottom: 2vh;
+  color: white;
+}
+
+input[type="checkbox"]{
+  margin-left: 10px;
+}
+
+input[type="submit"] {
+  width: 100px;
+  background: linear-gradient(109.6deg,black, rgba(0, 0, 0, 0.93) 11.2%, rgb(63, 61, 61) 78.9%);
+  color: white !important;
+  padding: 5px;
+  font-family: monospace;
+  border-radius: 3px;
+  border: none;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+
+input[type="submit"]:hover {
+  background: linear-gradient(109.6deg,rgb(63, 61, 61) 11.2%, rgba(0, 0, 0, 0.93) 78.9%, black);
+  color: white !important;
+}
+
+@media(max-width: 1200px){
+  .hl{
+    width: 27%;
+    margin-left: 28%;
+  }
+}
+
+@media(max-width: 768px){
+  .hl{
+    width: 39%;
+  }
+  .vl{
+    left: 56%;
+  }
+}
+
+@media(max-width: 650px){
+  .vl{
+    left: 57%;
+  }
+}
+
+@media(max-width: 580px){
+  .vl{
+    left: 58%;
+  }
+
+  .hl{
+    width: 39%;
+  }
+}
+
+@media(max-width: 495px){
+  .hl{
+    margin-left: 24%;
+    width: 42%;
+  }
+}
+
+@media (max-width: 462px){
+  .hl {
+    margin-left: 21%;
+    width: 46%;
+}
+}
+
+@media (max-width: 435px){
+  .hl {
+    margin-left: 18%;
+    width: 50%;
+}
+}
+
+
+@media (max-width: 415px){
+.hl {
+    margin-left: 15%;
+    width: 54%;
+}
+}
+
+@media (max-width: 395px){
+.hl {
+    margin-left: 13%;
+    width: 57%;
+}
+}
+
+@media (max-width:365px){
+  .vl{
+    left: 58%;
+  }
+
+  .hl{
+    width: 68%;
+    margin-left: 4%;
+  }
+}
+
+@media (max-width: 356px){
+  .section-title-1{
+    letter-spacing: 3px;
+  }
+
+  .section-title-2{
+    letter-spacing: 3px;
+  }
+
+  .hl {
+    width: 60%;
+    margin-left: 10%;
+}
+}
+
+@media (max-width: 330px){
+  .section-title-1{
+    letter-spacing: 2px;
+  }
+
+  .section-title-2{
+    letter-spacing: 2px;
+  }
+
+  .hl {
+    width: 60%;
+    margin-left: 10%;
+}
+}
+
+@media (max-width: 305px){
+  .section-title-1{
+    letter-spacing: 1px;
+  }
+
+  .section-title-2{
+    letter-spacing: 1px;
+  }
+
+}

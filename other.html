@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentDataCollection</title>
+    <link href="Assets copy/img/Rentologo.jpg" rel="icon">
+
+    <link href="Assets copy/css/style.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <section id="contact">
+        <div class="container col-lg-9">
+
+            <div class="vl"></div>
+
+            <div class="logo text-center">
+                <img src="Assets copy/img/rentologo1.jpg">
+            </div>
+
+            <div class="section-title-1 col-md-6 col-7">
+                Data Collection
+            </div>
+
+            <div class="hl"></div>
+
+            <div class="section-title-2 col-md-6 col-5">
+                For Others
+            </div>
+
+            <div>
+                <form name="submit-to-google-sheet">
+                    <div class="row">
+                        <div class="form-group col-sm-6">
+                            <input type="text" class="my-form-control" name="Name" placeholder="Name" required>
+                        </div>
+                        <div class="form-group col-sm-6">
+                            <input type="text" name="Contact Number" class="my-form-control"
+                                placeholder="Contact Number" required>
+                        </div>
+
+
+                        <div class="form-group">
+                            <textarea class="my-form-control" name="Other Purpose" rows="5" id="OtherPurpose"
+                                placeholder="PLease Share Your Requirements"></textarea>
+                        </div>
+                    </div>
+
+
+
+                    <div class="text-center">
+                        <input type="submit" value="Submit">
+                    </div>
+                </form>
+
+                <div class="text-center" style="padding-bottom: 50px; color: white;"><span id="msg"></span></div>
+
+            </div>
+
+        </div>
+
+
+    </section>
+
+    <section id="footer">
+        <div class="text-center">
+            <h6>Copyrights&copy;RentoBangalore</h6>
+        </div>
+
+    </section>
+
+    <script>
+        const scriptURL = "https://script.google.com/macros/s/AKfycbwULDE-c4lhJH87Few8uIQY9Jg-tTk3JAKEQ27KieMZa-ASTQWzCZVMj3adBf7dsd2YsA/exec"
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+        const submitButton = form.querySelector('input[type="submit"]')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            submitButton.disabled = true
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Thank You,We will Get Back to You Soon"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 5000)
+                    form.reset()
+                    submitButton.disabled = false
+                })
+                .catch(error => {
+                    console.error('Error!', error.message)
+                    submitButton.disabled = false
+                })
+        })
+
+        const otherLocation = document.getElementById('otherLocation');
+        const otherLocationBox = document.getElementById('otherLocationBox');
+
+        otherLocation.addEventListener('change', function () {
+            if (this.checked) {
+                otherLocationBox.style.display = 'block';
+            } else {
+                otherLocationBox.style.display = 'none';
+            }
+        });
+
+
+        const otherPreferredProperty = document.getElementById('otherPreferredProperty');
+        const otherPreferredPropertyBox = document.getElementById('otherPreferredPropertyBox');
+
+        otherPreferredProperty.addEventListener('change', function () {
+            if (this.checked) {
+                otherPreferredPropertyBox.style.display = 'block';
+            } else {
+                otherPreferredPropertyBox.style.display = 'none';
+            }
+        });
+
+        const otherBudget = document.getElementById('otherBudget');
+        const otherBudgetBox = document.getElementById('otherBudgetBox');
+
+        otherBudget.addEventListener('change', function () {
+            if (this.checked) {
+                otherBudgetBox.style.display = 'block';
+            } else {
+                otherBudgetBox.style.display = 'none';
+            }
+        });
+
+
+        const otherDateofShifting = document.getElementById('otherDateofShifting');
+        const otherDateofShiftingBox = document.getElementById('otherDateofShiftingBox');
+
+        otherDateofShifting.addEventListener('change', function () {
+            if (this.checked) {
+                otherDateofShiftingBox.style.display = 'block';
+            } else {
+                otherDateofShiftingBox.style.display = 'none';
+            }
+        });
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
