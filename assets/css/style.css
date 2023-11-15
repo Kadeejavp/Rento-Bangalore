@@ -356,7 +356,7 @@ h6 {
 
 @media(min-width: 600px) and (min-height: 1000px){
   .client-box{
-    width: 40vw;
+    width: 44vw;
     top: 9vh;
     height: 18vh;
   }
@@ -419,7 +419,7 @@ h6 {
     top: 21vh;
     height: 25vh;
     left: 44vw;
-    width: 45vw;
+    width: 47vw;
   }
 }
 
@@ -463,14 +463,14 @@ h6 {
 
 @media(max-width: 424px){
   .client-box{
-    width: 63vw;
+    width: 65vw;
     height: 19vh;
     top: 10vh;
   }
 
   .owner-box{
     left: 33vw;
-    width: 58vw;
+    width: 60vw;
     top: 52vw;
     height: 20vh;
   }
@@ -481,7 +481,7 @@ h6 {
     padding-top: 5px;
     top: 25vh;
     height: 19vh;
-    width: 62vw;
+    width: 65vw;
     left: 31vw;
   }
 
@@ -491,10 +491,21 @@ h6 {
   }
 
   .client-box{
-    width: 66vw;
+    width: 70vw;
     height: 19vh;
     top: 10vh;
     left: 18vw;
+  }
+}
+
+@media(max-width:375px) and (max-height:667px){
+  .client-box{
+    height: 22vh;
+  }
+
+  .owner-box{
+    height: 22vh;
+    top: 27vh;
   }
 }
 
@@ -544,6 +555,10 @@ h6 {
   .owner-box{
     left: 23vw;
     top: 23vh;
+  }
+
+  .box p{
+    letter-spacing: 2px;
   }
 }
 /*--------------------------------------------------------------
